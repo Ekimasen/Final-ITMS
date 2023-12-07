@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fibonacci</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            margin: 20px;
+            background-color: #f8f9fa;
+            color: #495057;
+        }
+
+        h1 {
+            color: #007bff;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        label {
+            display: block;
+            margin-top: 15px;
+            font-size: 18px;
+            color: #007bff;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            box-sizing: border-box;
+        }
+
+        button {
+            padding: 15px 30px;
+            font-size: 18px;
+            cursor: pointer;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 30px;
+            transition: background-color 0.3s;
+            margin-top: 20px;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        #result {
+            margin-top: 20px;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: #e0e0e0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        #result p {
+            font-size: 20px;
+            color: #007bff;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Fibonacci</h1>
+
+    <p>The Fibonacci sequence is a series of numbers where each number is the sum of the two preceding ones.</p>
+    <p>Formula: F(n) = F(n-1) + F(n-2) with initial conditions F(0) = 0, F(1) = 1.</p>
+
+    <label for="numberInput">Enter a number:</label>
+    <input type="text" id="numberInput">
+
+    <button onclick="performFibonacci()">Calculate Fibonacci</button>
+
+    <div id="result"></div>
+
+    <a href="index.html">Back to Main Page</a>
+
+    <script>
+        const memo = {};
+
+        function fibonacci(n) {
+            if (n <= 1) {
+                return n;
+            }
+
+            if (memo[n]) {
+                return memo[n];
+            }
+
+            let a = 0;
+            let b = 1;
+            let temp;
+
+            for (let i = 2; i <= n; i++) {
+                temp = a + b;
+                a = b;
+                b = temp;
+            }
+
+            memo[n] = b;
+            return b;
+        }
+
+        function performFibonacci() {
+            let numberInput = document.getElementById("numberInput").value;
+            let resultDiv = document.getElementById("result");
+
+            if (isNaN(numberInput) || !isFinite(numberInput) || numberInput < 0) {
+                resultDiv.innerHTML = "<p>Please enter a valid non-negative number.</p>";
+            } else {
+                resultDiv.innerHTML = "<p>The Fibonacci of " + numberInput + " is: " + fibonacci(parseInt(numberInput)) + "</p>";
+            }
+        }
+    </script>
+
+</body>
+</html>

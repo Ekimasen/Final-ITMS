@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IT-MS01</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            margin: 20px;
+            background-color: #004643;
+            color: #dee5ed;
+        }
+        h1{
+            color: #fffffe;
+            margin-bottom: 100px;
+        }
+
+        .options {
+            background-image: url('R.jpg');
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin: auto;
+            align-items: center;
+            background-color: #abd1c6;
+            height: 500px;
+        }
+
+        .option-button {
+            width: 150px;
+            padding: 15px 30px;
+            font-size: 18px;
+            cursor: pointer;
+            background-color: #f9bc60;
+            color: #001e1d;
+            border: none;
+            border-radius: 30px;
+            transition: background-color 0.3s;
+            text-decoration: none;
+            margin: auto;
+        }
+
+        .option-button:hover {
+            background-color: #0056b3;
+        }
+
+        @media (max-width: 768px) {
+            .options {
+                display: flex;
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>FINAL PROJECT IT-MS01</h1> 
+    <div class="options">
+        
+        <a href="permutation.html" class="option-button">Permutation</a>
+        <a href="combination.html" class="option-button">Combination</a>
+        <a href="fibonacci.html" class="option-button">Fibonacci</a>
+        <a href="lucas.html" class="option-button">Lucas Numbers</a>
+        <a href="tribonacci.html" class="option-button">Tribonacci</a>
+        <a href="collatz.html" class="option-button">Collatz Sequence</a>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Combination</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            margin: 20px;
+            background-color: #f8f9fa;
+            color: #495057;
+        }
+
+        h1 {
+            color: #007bff;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        label {
+            display: block;
+            margin-top: 15px;
+            font-size: 18px;
+            color: #007bff;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            box-sizing: border-box;
+        }
+
+        button {
+            padding: 15px 30px;
+            font-size: 18px;
+            cursor: pointer;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 30px;
+            transition: background-color 0.3s;
+            margin-top: 20px;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        #result {
+            margin-top: 20px;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: #e0e0e0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        #result p {
+            font-size: 20px;
+            color: #007bff;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Combination</h1>
+
+    <p>Combination is a selection of objects without considering the order. The formula for combination is: \( C(n, r) = \frac{n!}{r! \cdot (n-r)!} \)</p>
+
+    <label for="nInput">Enter total objects (n):</label>
+    <input type="text" id="nInput">
+
+    <label for="rInput">Enter selected objects (r):</label>
+    <input type="text" id="rInput">
+
+    <button onclick="performCombination()">Calculate Combination</button>
+
+    <div id="result"></div>
+
+    <a href="index.html">Back to Main Page</a>
+
+    <script>
+        function combination(n, r) {
+            let result = 1;
+            for (let i = 1; i <= r; i++) {
+                result *= (n - i + 1) / i;
+            }
+            return result;
+        }
+
+        function performCombination() {
+            let nInput = document.getElementById("nInput").value;
+            let rInput = document.getElementById("rInput").value;
+            let resultDiv = document.getElementById("result");
+
+            if (isNaN(nInput) || isNaN(rInput) || !isFinite(nInput) || !isFinite(rInput) || nInput < 0 || rInput < 0) {
+    resultDiv.innerHTML = "<p>Please enter valid non-negative numbers for n and r.</p>";
+}  else {
+    // Perform the combination calculation
+    resultDiv.innerHTML = "<p>The Combination \(C(" + nInput + ", " + rInput + ")\) is: " + combination(parseInt(nInput), parseInt(rInput)) + "</p>";
+}
+        }
+    </script>
+
+</body>
+</html>
