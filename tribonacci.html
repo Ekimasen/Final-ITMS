@@ -34,7 +34,7 @@
             border: 1px solid #e0e0e0;
         }
         .person2{
-            font-size: 20px;
+            font-size: 16px;
             background-color: rgba(0, 0, 0, 0.64);
             border-radius: 10px;
             margin-bottom: 40px;
@@ -61,21 +61,21 @@
             box-sizing: border-box;
             border-radius: 100px;
         }
-
         button {
             padding: 15px 30px;
             font-size: 18px;
             cursor: pointer;
-            background-color: #007bff;
-            color: #fff;
+            background-color: #f9bc60;
+            color: #001e1d;
             border: none;
             border-radius: 30px;
             transition: background-color 0.3s;
             margin-top: 20px;
+            font-family: 'Silkscreen', sans-serif;
         }
 
         button:hover {
-            background-color: #0056b3;
+            background-color: #fffffe;
         }
         .back{
             
@@ -108,12 +108,12 @@
 </head>
 <body>
 
-    <h1>Tribonacci</h1>
+    <h1><img src="star.png"> Tribonacci <img src="star.png"></h1>
 
-    <p class="person">The Tribonacci sequence is a series of numbers where each number is the sum of the three preceding ones.</p>
-    <p class="person2">Formula: T(n) = T(n-1) + T(n-2) + T(n-3) with initial conditions T(0) = 0, T(1) = 0, T(2) = 1.</p>
+    <p class="person"><img src="send.png"> The Tribonacci sequence is a series of numbers where each number is the sum of the three preceding ones.</p>
+    <p class="person2"><img src="minimize.png"> Formula: T(n) = T(n-1) + T(n-2) + T(n-3) with initial conditions T(0) = 0, T(1) = 0, T(2) = 1.</p>
 
-    <label for="numberInput">Enter a number:</label>
+    <label for="numberInput"><img src="minimize.png"> Enter a number:</label>
     <input type="text" id="numberInput">
 
     <button onclick="performTribonacci()">Calculate Tribonacci</button>
