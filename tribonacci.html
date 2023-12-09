@@ -23,13 +23,22 @@
 
         h1 {
             color: #fffffe;
-            margin-bottom: 20px;
+            margin-bottom: 30px;
+            text-shadow: 5px 5px 7px #001e1d;
         }
 
         .person{
             background-color: rgba(0, 0, 0, 0.64);
             border-radius: 10px;
             margin-bottom: 40px;
+            border: 1px solid #e0e0e0;
+        }
+        .person2{
+            font-size: 20px;
+            background-color: rgba(0, 0, 0, 0.64);
+            border-radius: 10px;
+            margin-bottom: 40px;
+            border: 1px solid #e0e0e0;
         }
         p {
             font-size: 16px;
@@ -42,6 +51,7 @@
             margin-top: 15px;
             font-size: 18px;
             color: #fffffe;
+            text-shadow: 5px 5px 7px #001e1d;
         }
 
         input {
@@ -49,6 +59,7 @@
             padding: 10px;
             margin-top: 10px;
             box-sizing: border-box;
+            border-radius: 100px;
         }
 
         button {
@@ -79,6 +90,7 @@
             transition: background-color 0.3s;
             text-decoration: none;
         }
+
         #result {
             margin-top: 20px;
             margin-bottom: 30px;
@@ -99,7 +111,7 @@
     <h1>Tribonacci</h1>
 
     <p class="person">The Tribonacci sequence is a series of numbers where each number is the sum of the three preceding ones.</p>
-    <p class="person">Formula: T(n) = T(n-1) + T(n-2) + T(n-3) with initial conditions T(0) = 0, T(1) = 0, T(2) = 1.</p>
+    <p class="person2">Formula: T(n) = T(n-1) + T(n-2) + T(n-3) with initial conditions T(0) = 0, T(1) = 0, T(2) = 1.</p>
 
     <label for="numberInput">Enter a number:</label>
     <input type="text" id="numberInput">

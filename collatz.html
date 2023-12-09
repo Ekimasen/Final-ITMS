@@ -12,7 +12,7 @@
             font-family: 'Arial', sans-serif;
             text-align: center;
             margin: 20px;
-            background-image: #f8f9fa;
+            background-color: #f8f9fa;
             color: #495057;
             background-image: url('bg2.jpg');
             background-repeat: no-repeat;
@@ -23,13 +23,22 @@
 
         h1 {
             color: #fffffe;
-            margin-bottom: 20px;
+            margin-bottom: 30px;
+            text-shadow: 5px 5px 7px #001e1d;
         }
 
         .person{
             background-color: rgba(0, 0, 0, 0.64);
             border-radius: 10px;
             margin-bottom: 40px;
+            border: 1px solid #e0e0e0;
+        }
+        .person2{
+            font-size: 20px;
+            background-color: rgba(0, 0, 0, 0.64);
+            border-radius: 10px;
+            margin-bottom: 40px;
+            border: 1px solid #e0e0e0;
         }
         p {
             font-size: 16px;
@@ -42,6 +51,7 @@
             margin-top: 15px;
             font-size: 18px;
             color: #fffffe;
+            text-shadow: 5px 5px 7px #001e1d;
         }
 
         input {
@@ -49,6 +59,7 @@
             padding: 10px;
             margin-top: 10px;
             box-sizing: border-box;
+            border-radius: 100px;
         }
 
         button {
@@ -66,19 +77,6 @@
         button:hover {
             background-color: #0056b3;
         }
-        #result {
-            margin-top: 20px;
-            margin-bottom: 30px;
-            padding: 20px;
-            border-radius: 10px;
-            background-color: #e0e0e0;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-
-        #result p {
-            font-size: 16px;
-            color: #007bff;
-        }
         .back{
             
             width: 150px;
@@ -92,6 +90,28 @@
             transition: background-color 0.3s;
             text-decoration: none;
         }
+
+        #result {
+            margin-top: 20px;
+            margin-bottom: 30px;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: #e0e0e0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        #result p {
+            font-size: 16px;
+            color: #007bff;
+        }
+        .condi{
+            color: #fffffe;
+            font-size: 16px;
+            background-color: rgba(0, 0, 0, 0.64);
+            border-radius: 10px;
+            margin-bottom: 40px;
+            border: 1px solid #e0e0e0;
+        }
     </style>
 </head>
 <body>
@@ -99,7 +119,7 @@
     <h1>Collatz Sequence</h1>
 
     <p class="person">The Collatz sequence is a series of numbers where each number is obtained from the previous number according to the following rules:</p>
-    <ul>
+    <ul class="condi">
         <li>If the current number is even, divide it by 2.</li>
         <li>If the current number is odd, multiply it by 3 and add 1.</li>
     </ul>
