@@ -22,21 +22,36 @@
         }
 
         h1 {
-            color: #007bff;
+            color: #fffffe;
             margin-bottom: 20px;
+            text-shadow: 5px 5px 7px #001e1d;
         }
 
+        .person{
+            background-color: rgba(0, 0, 0, 0.64);
+            border-radius: 10px;
+            margin-bottom: 40px;
+            border: 1px solid #e0e0e0;
+        }
+        .person2{
+            font-size: 20px;
+            background-color: rgba(0, 0, 0, 0.64);
+            border-radius: 10px;
+            margin-bottom: 40px;
+            border: 1px solid #e0e0e0;
+        }
         p {
             font-size: 16px;
             line-height: 1.6;
-            color: #333;
+            color: #fffffe;
         }
 
         label {
             display: block;
             margin-top: 15px;
             font-size: 18px;
-            color: #007bff;
+            color: #fffffe;
+            text-shadow: 5px 5px 7px #001e1d;
         }
 
         input {
@@ -61,9 +76,23 @@
         button:hover {
             background-color: #0056b3;
         }
+        .back{
+            
+            width: 150px;
+            padding: 15px 30px;
+            font-size: 18px;
+            cursor: pointer;
+            background-color: #f9bc60;
+            color: #001e1d;
+            border: none;
+            border-radius: 30px;
+            transition: background-color 0.3s;
+            text-decoration: none;
+        }
 
         #result {
             margin-top: 20px;
+            margin-bottom: 30px;
             padding: 20px;
             border-radius: 10px;
             background-color: #e0e0e0;
@@ -71,7 +100,7 @@
         }
 
         #result p {
-            font-size: 20px;
+            font-size: 16px;
             color: #007bff;
         }
     </style>
@@ -80,8 +109,8 @@
 
     <h1>Combination</h1>
 
-    <p>Combination is a selection of objects without considering the order. The formula for combination is: \( C(n, r) = \frac{n!}{r! \cdot (n-r)!} \)</p>
-
+    <p class="person">Combination is a selection of objects without considering the order.</p>
+    <p class="person2">Formula: C(n,r) = n!/(r!(n-r)!)</p>
     <label for="nInput">Enter total objects (n):</label>
     <input type="text" id="nInput">
 
@@ -92,7 +121,7 @@
 
     <div id="result"></div>
 
-    <a href="index.html">Back to Main Page</a>
+    <a href="index.html" class="back">Back to Main Page</a>
 
     <script>
         function combination(n, r) {
